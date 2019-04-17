@@ -8,9 +8,7 @@ export class FortuneController {
   ) {}
 
   @get('/fortune')
-  async fortune(): Promise<object> {
-    return {
-      message: await this.fortuneService.fortune()
-    };
+  async fortune(): Promise<string> {
+    return (await this.fortuneService.fortune()) + '\n';
   }
 }
