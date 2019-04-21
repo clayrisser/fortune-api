@@ -28,6 +28,7 @@ export class FortuneApplication extends BootMixin(
     this.static('/', path.join(__dirname, '../public'));
 
     this.bind(FORTUNE_SERVICE).toProvider(FortunesServiceProvider);
+    // this.bind(FORTUNE_SERVICE).toProvider(GetRandomQuoteServiceProvider);
 
     // Customize @loopback/rest-explorer configuration here
     this.bind(RestExplorerBindings.CONFIG).to({
